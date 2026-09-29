@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist - Toy Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navRow">
+          <div class="logo">
+            <span class="logoText">ToyWorld</span>
+          </div>
+
+          <ul class="navLinks">
+            <li><a href="home.html" class="navLink">Home</a></li>
+            <li><a href="product.html" class="navLink">Products</a></li>
+            <li><a href="Feedback.html" class="navLink">Contact</a></li>
+            <li>
+              <a href="cart.html" class="navLink navLinkIcon">
+                Cart <span id="cart-count" class="badge">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="wishlist.html" class="navLink navLinkIcon active">
+                Wishlist
+                <span id="wishlist-count" class="badge badgeAlt">0</span>
+              </a>
+            </li>
+          </ul>
+
+          <button id="mobile-menu-btn" class="menuToggle">Menu</button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobileMenu hidden">
+        <a href="home.html" class="mobileLink">Home</a>
+        <a href="product.html" class="mobileLink">Products</a>
+        <a href="Feedback.html" class="mobileLink">Contact</a>
+        <a href="cart.html" class="mobileLink"
+          >Cart (<span id="mobile-cart-count">0</span>)</a
+        >
+        <a href="wishlist.html" class="mobileLink active"
+          >Wishlist (<span id="mobile-wishlist-count">0</span>)</a
+        >
+      </div>
+    </nav>
+
+    <main class="container main">
+      <h2 class="sectionTitle">Your Wishlist</h2>
+
+      <div id="wishlist-filters" class="wishlistFilters">
+        <button class="filterTab active" data-filter="All">All</button>
+        <button class="filterTab" data-filter="Interested">Interested</button>
+        <button class="filterTab" data-filter="Owned">Owned</button>
+        <button class="filterTab" data-filter="Not Interested">
+          Not Interested
+        </button>
+      </div>
+
+      <section id="wishlist-items" class="wishlistList"></section>
+
+      <div id="wishlist-empty" class="emptyState hidden">
+        <h3 class="emptyTitle">Your wishlist is empty.</h3>
+        <p class="emptyText">
+          Tap "Save" on any toy in the Products page to add it here.
+        </p>
+      </div>
+    </main>
+
+    <div id="toast" class="toast">
+      <h4 class="toastTitle" id="toast-title">Notification</h4>
+      <p class="toastMessage" id="toast-message">Item added to cart!</p>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Toy Store Assignment Project. All rights reserved.</p>
+    </footer>
+
+    <script src="wishlist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Green Tyrannosaurus Rex Figurine",
+    "image": "trex.jpg",
+    "price": 3900
+  },
+  {
+    "id": 2,
+    "name": "Colorful Plastic Building Bricks",
+    "image": "bricks.jpg",
+    "price": 6000
+  },
+  {
+    "id": 3,
+    "name": "Classic Plush Teddy Bear with Bow",
+    "image": "teddy.jpg",
+    "price": 4650
+  },
+  {
+    "id": 4,
+    "name": "Vintage Wind-Up Metal Robot",
+    "image": "robot.jpg",
+    "price": 7500
+  },
+  {
+    "id": 5,
+    "name": "Rainbow Plush Unicorn Toy",
+    "image": "unicorn.jpg",
+    "price": 5500
+  },
+  {
+    "id": 6,
+    "name": "Rainbow Stacking Rings Toy",
+    "image": "ricgstac.jpg",
+    "price": 3000
+  },
+  {
+    "id": 7,
+    "name": "Colorful Wooden Toy Train",
+    "image": "train.jpg",
+    "price": 4200
+  },
+  {
+    "id": 8,
+    "name": "Red Wooden Toy Aeroplane",
+    "image": "plane.jpg",
+    "price": 3800
+  }
+]

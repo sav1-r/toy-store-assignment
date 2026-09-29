@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navRow">
+          <div class="logo">
+            <span class="logoIcon"></span>
+            <span class="logoText">Toyheaven</span>
+          </div>
+
+          <ul class="navLinks">
+            <li><a href="home.html" class="navLink active">Home</a></li>
+            <li><a href="product.html" class="navLink">Products</a></li>
+            <li><a href="Feedback.html" class="navLink">Contact</a></li>
+            <li>
+              <a href="Cart.html" class="navLink navLinkIcon">
+                Cart <span id="cart-count" class="badge">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="wishlist.html" class="navLink navLinkIcon">
+                Wishlist
+                <span id="wishlist-count" class="badge badgeAlt">0</span>
+              </a>
+            </li>
+          </ul>
+
+          <button id="mobile-menu-btn" class="menuToggle">Menu</button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobileMenu hidden">
+        <a href="home.html" class="mobileLink active">Home</a>
+        <a href="product.html" class="mobileLink">Products</a>
+        <a href="Feedback.html" class="mobileLink">Contact</a>
+        <a href="cart.html" class="mobileLink"
+          >Cart (<span id="mobile-cart-count">0</span>)</a
+        >
+        <a href="wishlist.html" class="mobileLink"
+          >Wishlist (<span id="mobile-wishlist-count">0</span>)</a
+        >
+      </div>
+    </nav>
+
+    <div class="banner">
+      <img src="banner.jpg" alt="ToyWorld store banner" class="bannerImg" />
+    </div>
+
+    <main class="container main">
+      <h2 class="sectionTitle">Best Sellers</h2>
+
+      <section class="bestSellers">
+        <div class="bestSellerRow">
+          <div class="bestSellerImage">
+            <img
+              src="trex.jpg"
+              alt="Green Tyrannosaurus Rex Figurine"
+              class="productImg"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'block';
+              "
+            />
+            <div class="svgFallback hidden">
+              <div class="fallbackBox" style="background-color: #3399ff">
+                <span class="fallbackLetter">G</span>
+              </div>
+            </div>
+          </div>
+          <div class="bestSellerContent">
+            <span class="bestSellerTag">Best Seller</span>
+            <h3 class="bestSellerTitle">Green Tyrannosaurus Rex Figurine</h3>
+            <p class="bestSellerPrice">LKR 3,900</p>
+            <button
+              onclick="addToCart(1, 'Green Tyrannosaurus Rex Figurine', 3900)"
+              class="btn"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="bestSellerRow reversed">
+          <div class="bestSellerImage">
+            <img
+              src="robot.jpg"
+              alt="Vintage Wind-Up Metal Robot"
+              class="productImg"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'block';
+              "
+            />
+            <div class="svgFallback hidden">
+              <div class="fallbackBox" style="background-color: #5a4dff">
+                <span class="fallbackLetter">V</span>
+              </div>
+            </div>
+          </div>
+          <div class="bestSellerContent">
+            <span class="bestSellerTag">Best Seller</span>
+            <h3 class="bestSellerTitle">Vintage Wind-Up Metal Robot</h3>
+            <p class="bestSellerPrice">LKR 7,500</p>
+            <button
+              onclick="addToCart(4, 'Vintage Wind-Up Metal Robot', 7500)"
+              class="btn"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="bestSellerRow">
+          <div class="bestSellerImage">
+            <img
+              src="unicorn.jpg"
+              alt="Rainbow Plush Unicorn Toy"
+              class="productImg"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'block';
+              "
+            />
+            <div class="svgFallback hidden">
+              <div class="fallbackBox" style="background-color: #3399ff">
+                <span class="fallbackLetter">R</span>
+              </div>
+            </div>
+          </div>
+          <div class="bestSellerContent">
+            <span class="bestSellerTag">Best Seller</span>
+            <h3 class="bestSellerTitle">Rainbow Plush Unicorn Toy</h3>
+            <p class="bestSellerPrice">LKR 5,500</p>
+            <button
+              onclick="addToCart(5, 'Rainbow Plush Unicorn Toy', 5500)"
+              class="btn"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast">
+      <h4 class="toastTitle" id="toast-title">Notification</h4>
+      <p class="toastMessage" id="toast-message">Item added to cart!</p>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Toy Store Assignment Project. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+  </body>
+</html>

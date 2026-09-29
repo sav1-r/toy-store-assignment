@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navRow">
+          <div class="logo">
+            <span class="logoText">Toyheaven</span>
+          </div>
+
+          <ul class="navLinks">
+            <li><a href="home.html" class="navLink">Home</a></li>
+            <li><a href="product.html" class="navLink">Products</a></li>
+            <li><a href="Feedback.html" class="navLink">Contact</a></li>
+            <li>
+              <a href="cart.html" class="navLink navLinkIcon">
+                Cart <span id="cart-count" class="badge">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="wishlist.html" class="navLink navLinkIcon">
+                Wishlist
+                <span id="wishlist-count" class="badge badgeAlt">0</span>
+              </a>
+            </li>
+          </ul>
+
+          <button id="mobile-menu-btn" class="menuToggle">Menu</button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobileMenu hidden">
+        <a href="home.html" class="mobileLink">Home</a>
+        <a href="product.html" class="mobileLink">Products</a>
+        <a href="Feedback.html" class="mobileLink">Contact</a>
+        <a href="cart.html" class="mobileLink"
+          >Cart (<span id="mobile-cart-count">0</span>)</a
+        >
+        <a href="wishlist.html" class="mobileLink"
+          >Wishlist (<span id="mobile-wishlist-count">0</span>)</a
+        >
+      </div>
+    </nav>
+
+    <main class="container main">
+      <h2 class="sectionTitle">Checkout</h2>
+
+      <div id="checkout-empty" class="emptyState hidden">
+        <h3 class="emptyTitle">Your cart is empty.</h3>
+        <p class="emptyText">
+          Add some toys from the Products page before checking out.
+        </p>
+      </div>
+
+      <form id="checkout-form" class="checkoutForm">
+        <label class="formLabel" for="full-name">Full Name</label>
+        <input
+          type="text"
+          id="full-name"
+          class="formInput"
+          placeholder="e.g. Nimal Perera"
+        />
+        <p class="formError hidden" id="error-full-name">
+          Please enter your full name.
+        </p>
+
+        <label class="formLabel" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="formInput"
+          placeholder="e.g. nimal@email.com"
+        />
+        <p class="formError hidden" id="error-email">
+          Please enter a valid email address.
+        </p>
+
+        <label class="formLabel" for="address">Delivery Address</label>
+        <input
+          type="text"
+          id="address"
+          class="formInput"
+          placeholder="House no, street, city"
+        />
+        <p class="formError hidden" id="error-address">
+          Please enter your delivery address.
+        </p>
+
+        <label class="formLabel">Payment Method</label>
+        <div id="payment-options" class="paymentOptions">
+          <button
+            type="button"
+            class="paymentOption selected"
+            data-method="Card"
+          >
+            Card
+          </button>
+          <button
+            type="button"
+            class="paymentOption"
+            data-method="Cash on Delivery"
+          >
+            Cash on Delivery
+          </button>
+        </div>
+
+        <div class="checkoutDivider"></div>
+
+        <div id="order-lines" class="orderLines"></div>
+
+        <div class="checkoutSummary">
+          <div class="summaryLines">
+            <div class="summaryRow">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal">LKR 0</span>
+            </div>
+            <div class="summaryRow total">
+              <span>Total</span>
+              <span id="checkout-total">LKR 0</span>
+            </div>
+          </div>
+          <button type="submit" class="btn placeOrderBtn">Review Order</button>
+        </div>
+      </form>
+
+      <div id="order-review" class="orderReview hidden">
+        <h3 class="reviewHeading">Confirm Your Order</h3>
+
+        <div class="reviewDetails">
+          <p><strong>Name:</strong> <span id="review-name"></span></p>
+          <p><strong>Email:</strong> <span id="review-email"></span></p>
+          <p><strong>Address:</strong> <span id="review-address"></span></p>
+          <p><strong>Payment:</strong> <span id="review-payment"></span></p>
+        </div>
+
+        <div class="checkoutDivider"></div>
+
+        <div id="review-lines" class="orderLines"></div>
+
+        <div class="summaryRow total reviewTotalRow">
+          <span>Total</span>
+          <span id="review-total">LKR 0</span>
+        </div>
+
+        <div class="reviewActions">
+          <button id="edit-order-btn" type="button" class="clearCartBtn">
+            Edit Details
+          </button>
+          <button
+            id="confirm-order-btn"
+            type="button"
+            class="btn placeOrderBtn"
+          >
+            Confirm Order
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div id="success-overlay" class="successOverlay hidden">
+      <div class="successCard">
+        <div class="successCheck">
+          <svg viewBox="0 0 52 52" class="successCheckSvg">
+            <circle
+              class="successCheckCircle"
+              cx="26"
+              cy="26"
+              r="24"
+              fill="none"
+            />
+            <path class="successCheckMark" fill="none" d="M14 27l7 7 16-16" />
+          </svg>
+        </div>
+        <h3 class="successTitle">Order Placed!</h3>
+        <p class="successText">
+          Thank you for shopping with toyhevan. A confirmation has been saved to
+          your order history.
+        </p>
+      </div>
+    </div>
+
+    <div id="toast" class="toast">
+      <h4 class="toastTitle" id="toast-title">Notification</h4>
+      <p class="toastMessage" id="toast-message">Item added to cart!</p>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 toyhevan Assignment Project. All rights maybe reserved.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

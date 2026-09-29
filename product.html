@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Toy Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navRow">
+          <div class="logo">
+            <span class="logoIcon"></span>
+            <span class="logoText">Toyheavan</span>
+          </div>
+
+          <ul class="navLinks">
+            <li><a href="home.html" class="navLink">Home</a></li>
+            <li><a href="product.html" class="navLink active">Products</a></li>
+            <li><a href="Feedback.html" class="navLink">Contact</a></li>
+            <li>
+              <a href="Cart.html" class="navLink navLinkIcon">
+                Cart <span id="cart-count" class="badge">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="wishlist.html" class="navLink navLinkIcon">
+                Wishlist
+                <span id="wishlist-count" class="badge badgeAlt">0</span>
+              </a>
+            </li>
+          </ul>
+
+          <button id="mobile-menu-btn" class="menuToggle">Menu</button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobileMenu hidden">
+        <a href="home.html" class="mobileLink">Home</a>
+        <a href="product.html" class="mobileLink active">Products</a>
+        <a href="Feedback.html" class="mobileLink">Contact</a>
+        <a href="Cart.html" class="mobileLink"
+          >Cart (<span id="mobile-cart-count">0</span>)</a
+        >
+        <a href="wishlist.html" class="mobileLink"
+          >Wishlist (<span id="mobile-wishlist-count">0</span>)</a
+        >
+      </div>
+    </nav>
+
+    <main class="container main">
+      <div class="searchSection">
+        <div class="searchBar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search toys by name"
+            class="searchInput"
+          />
+          <button id="search-btn" type="button" class="searchButton">
+            Search
+          </button>
+        </div>
+      </div>
+
+      <section id="products-container" class="productsGrid"></section>
+
+      <div id="no-results" class="emptyState hidden">
+        <h3 class="emptyTitle">No toys found matching your search.</h3>
+        <p class="emptyText"></p>
+      </div>
+    </main>
+    s
+    <div id="toast" class="toast">
+      <h4 class="toastTitle" id="toast-title">Notification</h4>
+      <p class="toastMessage" id="toast-message">Item added to cart!</p>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Toy Store Assignment Project. All rights reserved.</p>
+    </footer>
+
+    <script src="product.js"></script>
+  </body>
+</html>
