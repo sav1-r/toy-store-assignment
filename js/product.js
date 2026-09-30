@@ -3,56 +3,56 @@ const productsData = [
   {
     "id": 1,
     "name": "Green Tyrannosaurus Rex Figurine",
-    "image": "trex.jpg",
+    "image": "img/trex.jpg",
     "price": 3900,
     "color": "#3399ff"
   },
   {
     "id": 2,
     "name": "Colorful Plastic Building Bricks",
-    "image": "bricks.jpg",
+    "image": "img/bricks.jpg",
     "price": 6000,
     "color": "#5a4dff"
   },
   {
     "id": 3,
     "name": "Classic Plush Teddy Bear with Bow",
-    "image": "teddy.jpg",
+    "image": "img/teddy.jpg",
     "price": 4650,
     "color": "#3399ff"
   },
   {
     "id": 4,
     "name": "Vintage Wind-Up Metal Robot",
-    "image": "robot.jpg",
+    "image": "img/robot.jpg",
     "price": 7500,
     "color": "#3399ff"
   },
   {
     "id": 5,
     "name": "Rainbow Plush Unicorn Toy",
-    "image": "unicorn.jpg",
+    "image": "img/unicorn.jpg",
     "price": 5500,
     "color": "#5a4dff"
   },
   {
     "id": 6,
     "name": "Rainbow Stacking Rings Toy",
-    "image": "ricgstac.jpg",
+    "image": "img/ringstack.jpg",
     "price": 3000,
     "color": "#3399ff"
   },
   {
     "id": 7,
     "name": "Colorful Wooden Toy Train",
-    "image": "train.jpg",
+    "image": "img/train.jpg",
     "price": 4200,
     "color": "#3399ff"
   },
   {
     "id": 8,
     "name": "Red Wooden Toy Aeroplane",
-    "image": "plane.jpg",
+    "image": "img/plane.jpg",
     "price": 3800,
     "color": "#5a4dff"
   }
