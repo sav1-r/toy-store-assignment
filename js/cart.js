@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('clear-cart-btn').addEventListener('click', clearCart);
 
   document.getElementById('checkout-btn').addEventListener('click', () => {
-    window.location.href = 'checkout.html';
+    window.location.href = 'Checkout.html';
   });
 
 

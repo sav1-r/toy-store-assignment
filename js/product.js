@@ -95,8 +95,6 @@ function renderProducts(items) {
 
     return `
       <div class="card">
-
-        <!-- Wishlist Toggle (Top-Right of Card) -->
         <button 
           onclick="toggleWishlist(${item.id})"
           class="wishlistBtn ${isWishlisted ? 'active' : ''}"
@@ -104,7 +102,6 @@ function renderProducts(items) {
           ${isWishlisted ? 'wishlisted' : 'wishlist'}
         </button>
 
-        <!-- Image Area -->
         <div class="imgBox">
           <img 
             src="${item.image}" 
@@ -118,13 +115,11 @@ function renderProducts(items) {
           </div>
         </div>
 
-        <!-- Title & Price -->
         <div class="cardInfo">
           <h3 class="productName">${item.name}</h3>
           <p class="productPrice">${formatLKR(item.price)}</p>
         </div>
 
-        <!-- Stock & Add to Cart -->
         <div class="cardFooter">
           <span class="stockLabel">In Stock</span>
           <button 
